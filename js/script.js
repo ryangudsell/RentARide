@@ -17,7 +17,6 @@ const rangepicker = new DateRangePicker(datePickerContainer, {
 });
 
 // MapBox
-mapboxgl.accessToken = 'pk.eyJ1Ijoic3Vkc2VsbCIsImEiOiJjbGkyYXZuNnQxM245M2Ntdmo0N29wbWswIn0.Ux3-Lz8tBH5LGWJBz53egA';
 
 const map = new mapboxgl.Map({
     container: 'map', // container ID
