@@ -1,0 +1,17 @@
+@media screen and (min-width:768px) {
+#page2 {
+    #page2-wrapper {
+        #vehicle-shopping-cart-wrapper {
+            #vehicle-shopping-cart {
+                #shopping-cart-vehicle, #shopping-cart-journey {
+                    margin-top: $m-padding;
+                    padding-bottom: $s-padding;
+                    img {
+                        height: 160px;
+                    }
+                }
+            }
+        }
+    }
+}
+}

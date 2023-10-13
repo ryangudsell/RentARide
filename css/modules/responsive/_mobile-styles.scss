@@ -1,0 +1,193 @@
+@media only screen and (min-width:425px) {* {text-align: center;}}
+// Swiper Styles
+body {
+    width: 100vw;
+    height: 100vh;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden!important;
+    background: url("../img/car-bg.jpg");
+    background-size: cover;
+    &:-webkit-scrollbar {
+        display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+// DatePicker
+.datepicker-controls, .datepicker-controls:hover {background-color: $dark-yellow!important; border-bottom: 2px solid $black;}
+.datepicker-controls .button {background-color: $dark-yellow!important;}
+.datepicker-controls .button:hover {background-color: $yellow!important;}
+.days-of-week, .day {font-family: $paragraph-font;}
+
+.datepicker-cell.range-start {
+    background-color: $dark-yellow!important;
+}
+.datepicker-cell.range {
+    background-color: $yellow;
+}
+.datepicker-cell.range-end {
+    background-color: $dark-yellow!important;
+}
+.datepicker-cell.range:hover {
+    background-color: $selected-yellow!important;
+}
+
+// Custom CSS
+* {text-align: center;}
+
+.block {
+    display: block;
+}
+.hide {
+    display: none!important;
+}
+
+.margin-xs-bottom {margin-bottom: $xs-padding;}
+.margin-s-bottom {margin-bottom: $s-padding;}
+.margin-m-bottom {margin-bottom: $m-padding;}
+
+#page1 {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #page1-main {
+        max-width: 450px;
+        border-radius: $xl-border-radius;
+        overflow: hidden;
+        #page1-hero, #page1-inputs {
+            padding: $xl-padding;
+        }
+        #page1-hero {
+            background-color: $dark-blue;
+        }
+        #page1-inputs {
+            background-color: $off-white;
+            label, h4, input {
+                display: inline;
+            }
+            .divider {
+                border-top: 1px solid $dark-blue;
+                border-bottom: 1px solid $dark-blue;
+                width: 90%;
+                margin: $m-padding auto;
+                padding: $s-padding;
+            }
+        }
+    }
+}
+
+#page2 {
+    width: 100%;
+    height: 100%;
+    #page2-wrapper {
+        height: 100%;
+        display: grid;
+        grid-template-rows: 45% 55%;
+        overflow: hidden;
+        #page2-mapbox-half {
+            #map {
+                z-index: 1;
+            }
+        }
+        #page2-vehicle-half {
+            width: 100vw;
+            #vehicle-carousel {
+                border: 1px solid $dark-blue;
+                background-color: $white-transparent;
+                height: 80%;
+                width: 100%;
+
+                display: flex;
+                align-items: center;
+                flex-wrap: nowrap;
+                overflow: auto;
+                -webkit-overflow-scrolling: touch;
+                -ms-overflow-style: -ms-autohiding-scrollbar;
+                gap: 30px;
+
+                padding: $m-padding $l-padding;
+                margin-bottom: $s-padding;
+                .card-wrapper {
+                    width: 220px;
+                    height: 100%;
+
+                    background-color: $off-white;
+                    border: 1px solid $dark-blue;
+                    border-radius: $s-border-radius;
+                    flex: 0 0 auto;
+                    overflow: hidden;
+
+                    display: grid;
+                    grid-template-rows: 40% 60%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    div {padding-top: $xs-padding;}
+                    div>* {margin-bottom: $xs-padding;}
+                }
+            }
+        }
+
+        #vehicle-shopping-cart-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+
+            width: 100vw;
+            height: 100vh;
+
+            backdrop-filter: blur(2px);
+
+            #shopping-cart-close-button {
+                position: absolute;
+                top: -80px;
+                right: 10px;
+
+                cursor: pointer;
+
+                i {font-size: 64px;}
+            }
+
+            #vehicle-shopping-cart {
+                position: absolute;
+                bottom: 0;
+
+                width: 100%;
+                height: 90%;
+
+                background-color: $off-white;
+                border: 2px solid $dark-blue;
+                border-radius: $m-border-radius $m-border-radius 0 0;
+                box-shadow: $shopping-modal-drop-shadow;
+
+                padding: $l-padding;
+                #shopping-cart-vehicle, #shopping-cart-journey {
+                    display: flex;
+                    flex-direction: column;
+                    * {
+                        margin-bottom: $xs-padding!important;
+                    }
+                    &.all-inputs{border-bottom: 2px solid $dark-blue;}
+                    img {
+                        height: 100px;
+                        width: 230px;
+                        object-fit: cover;
+                        margin: 0 auto;
+                    }
+                }
+                #shopping-cart-journey h4 {margin-top: $xs-padding;}
+            }
+        }
+    }
+}

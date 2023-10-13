@@ -1,0 +1,72 @@
+h1 {
+    font-family: $header-font;
+    font-size: $header-size;
+    font-weight: 900;
+    letter-spacing: -0.085em;
+    color: $white;
+    &.blue-text {
+        color: $dark-blue;
+    }
+}
+
+h2, h4 {
+    font-size: $subheader-size;
+    font-weight: 900;
+}
+
+h2 {
+    font-family: $header-font;
+    color: $dark-yellow;
+}
+
+h4 {font-family: $paragraph-font;}
+
+a, p {
+    font-family: $paragraph-font;
+    font-size: $p-size;
+    &.grey-text {
+        color: $grey;
+        font-style: italic;
+    }
+    &.red-text {
+        color: red;
+        font-style: italic;
+    }
+}
+
+a {
+    color: $dark-blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+input {
+    width: 150px;
+    height: 30px;
+    ::placeholder {
+        color: $grey;
+        font-style: italic;
+    }
+    border-radius: $xs-border-radius;
+    box-shadow: $input-box-shadow;
+}
+
+button {
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: $dark-yellow;
+    border: 4px solid $dark-yellow;
+    padding: 10px 20px;
+    border-radius: $m-border-radius;
+    &.vehicle-info-button {font-weight: 900;}
+    &.blue-button {
+        text-align: right;
+        background-color: $blue;
+        border: 1px solid $dark-blue;
+        padding: 6px 8px;
+        color: $off-white;
+        border-radius: $xs-border-radius;
+    }
+    &.large-button {padding: 10px 25px;}
+    &:hover {background-color: $yellow;}
+}
